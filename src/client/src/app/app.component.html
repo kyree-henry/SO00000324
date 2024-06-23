@@ -1,0 +1,21 @@
+<div class="wrapper">
+    <div class="small-side" [class.drawer-open]="isDrawerOpen">
+        
+        <button class="drawer-close" *ngIf="isDrawerOpen" (click)="closeDrawer()">
+            <mat-icon>chevron_right</mat-icon>
+        </button>
+
+        <button class="plus-button">
+            <mat-icon>add</mat-icon>
+        </button>
+
+        <app-calendar></app-calendar>
+
+    </div>
+    <div class="large-side"  [class.drawer-open]="isDrawerOpen">
+        <app-toolbar></app-toolbar>
+    </div>
+    <button class="drawer-toggle" *ngIf="!isDrawerOpen" (click)="toggleDrawer()">
+        <mat-icon>menu</mat-icon>    
+    </button>
+</div>

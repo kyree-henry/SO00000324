@@ -1,0 +1,7 @@
+<div class="year-view">
+    <div class="years">
+        <div *ngFor="let year of years; let i = index" (click)="selectYear(year)" [ngClass]='year === currentYear ? "active" : ""' class="year">
+            {{ year }}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<h2 mat-dialog-title>Move Appointment</h2>
+<mat-dialog-content>
+    <mat-form-field>
+        <!-- <input [(ngModel)]="newDate" name="newDate" matInput [matDatepicker]="picker" placeholder="Choose a date"> -->
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+        <!-- <input [(ngModel)]="newTime" name="newTime" matInput type="time" placeholder="Choose a time" /> -->
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onCancel()">Cancel</button>
+    <button mat-button (click)="onSave()">Save</button>
+</mat-dialog-actions>

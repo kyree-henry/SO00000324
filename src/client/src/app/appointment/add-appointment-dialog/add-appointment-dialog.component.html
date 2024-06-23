@@ -1,0 +1,23 @@
+<h2 mat-dialog-title>Add Appointment</h2>
+<hr />
+<mat-dialog-content [formGroup]="appointmentForm">
+    <mat-form-field>
+        <input matInput formControlName="title" placeholder="Title">
+    </mat-form-field>
+    <mat-form-field>
+        <mat-label>Date</mat-label>
+        <input matInput [matDatepicker]="picker" formControlName="date" disabled>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+    <mat-form-field>
+        <input matInput formControlName="time" placeholder="Time">
+    </mat-form-field>
+    <mat-form-field>
+        <textarea matInput formControlName="description" placeholder="Description"></textarea>
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onNoClick()">Cancel</button>
+    <button mat-button (click)="onSaveClick()" [disabled]="!appointmentForm.valid">Save</button>
+</mat-dialog-actions>

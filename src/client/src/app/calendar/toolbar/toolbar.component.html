@@ -1,0 +1,30 @@
+<mat-toolbar class="top-header">
+  <div class="left-section">
+    <button class="left-item">
+      <mat-icon>chevron_left</mat-icon>
+    </button>
+    <div class="middle-item">
+      <span>Today</span>
+    </div>
+    <button class="right-item">
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+  <div class="middle-section">
+    <button
+      *ngFor="let tab of ['Day', 'Week', 'Month', 'Year']; let i = index"
+      mat-button
+      class="tab-button"
+      [class.active]="activeTab === i"
+      (click)="setActiveTab(i)"
+    >
+      {{ tab }} 
+    </button>
+  </div>
+  <div class="right-section">
+    <div class="search-bar" (clickOutside)="closeSearch()">
+      <mat-icon (click)="toggleSearch()">search</mat-icon>
+      <input [ngClass]='isSearchExpanded ? "" : "search-bar-hidden"' matInput type="text" placeholder="Search..." (click)="$event.stopPropagation()" />
+    </div>
+  </div>
+</mat-toolbar>

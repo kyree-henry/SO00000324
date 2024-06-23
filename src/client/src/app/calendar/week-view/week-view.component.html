@@ -1,0 +1,24 @@
+<div class="week-view">
+    <div class="calendar">
+      <div class="day-header" *ngFor="let day of daysOfWeek">{{ day }}</div>
+      <div 
+        class="day-cell" 
+        *ngFor="let day of daysOfMonth;let i = index"
+        [ngClass]="{'empty': day.number === null}"
+        (click)="openAppointmentDialog(day)"
+        cdkDropList
+        [cdkDropListData]="appointments[day.number]"
+        [id]="'day-cell-' + i"
+        (cdkDropListDropped)="drop($event, i)">
+        <div class="day">{{ day.number }}</div>
+        <div class="appointments">
+          <div 
+            class="appointment" 
+            *ngFor="let appointment of appointments[day.number]" 
+            cdkDrag>{{ appointment.title }}</div>
+            
+        </div>
+      </div>
+    </div>
+  </div>
+  

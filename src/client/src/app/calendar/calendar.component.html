@@ -1,0 +1,43 @@
+<div class="calendar-container">
+    <div class="calendar-header">
+        <div class="item-one">
+            <h1>{{ calendarService.currentMonthName }}</h1>
+        </div>
+        <div class="item-two">
+            <h1>{{ calendarService.currentYear }}</h1>
+        </div>
+        <div class="item-three">
+            <button class="left-item">
+                <mat-icon mat-icon-button (click)="calendarService.previousMonth()" class="fs-3">chevron_left</mat-icon>
+            </button>
+
+            <button class="right-item">
+                <mat-icon mat-icon-button (click)="calendarService.nextMonth()" class="fs-3">chevron_right</mat-icon>
+            </button>
+        </div>
+    </div>
+
+    <div class="calendar-main">
+        <div class="calendar-week">
+            <div class="days-of-week">
+                <span>CW</span>
+            </div>
+            <div class="calendar-week-list">
+                <span *ngFor="let calendarWeek of calendarService.calendarWeeks">{{ calendarWeek.weekNumber }}</span>
+            </div>
+        </div>
+        <div class="calendar-week">
+            <div class="days-of-week">
+                <span *ngFor="let day of calendarService.daysOfWeek">{{ day }}</span>
+            </div>
+            <div class="days-of-month">
+                <fieldset *ngFor="let calendarWeek of calendarService.calendarWeeks">
+                    <span *ngFor="let day of calendarWeek.days" 
+                          [ngClass]="{ 'outside-current-month': day.isOutsideCurrentMonth, 'current-week': day.isCurrentWeek }">
+                           {{ day.date }}
+                    </span>
+                </fieldset>
+            </div>
+        </div>
+
+    </div>

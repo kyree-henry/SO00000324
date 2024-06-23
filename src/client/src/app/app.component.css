@@ -1,0 +1,121 @@
+.wrapper {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .small-side {
+    width: 25%;
+    background-color: #212121;
+    color: white;
+    z-index: 1000;
+    transition: transform 0.3s ease-in-out;
+    position: relative;
+  }
+  
+  .large-side {
+    width: 75%;
+    background-color: white;
+    transition: margin-left 0.3s ease-in-out;
+  }
+  
+  .drawer-toggle {
+    display: none;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+  
+  .drawer-close {
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: -24px;
+    padding: 0;
+    background-color: #212121;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 1000;
+  }
+
+  .plus-button {
+    background-color: #373737; 
+    color: white;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    border-radius: 10%;
+    z-index: 1000;
+  }
+  
+  @media (max-width: 1024px) and (min-width: 768px) {
+    .wrapper {
+      flex-direction: row;
+    }
+    
+    .small-side {
+      width: 65%;
+      height: 100%;
+      position: absolute;
+      transform: translateX(-100%);
+    }
+  
+    .small-side.drawer-open {
+      transform: translateX(0);
+    }
+    
+    .large-side {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .drawer-toggle {
+      display: block;
+    }
+  
+    .drawer-close {
+      display: block;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .wrapper {
+      flex-direction: column;
+    }
+  
+    .small-side {
+      width: 65%;
+      height: 100%;
+      position: absolute;
+      transform: translateX(-100%);
+    }
+  
+    .small-side.drawer-open {
+      transform: translateX(0);
+    }
+  
+    .large-side {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .drawer-toggle {
+      display: block;
+    }
+  
+    .drawer-close {
+      display: block;
+    }
+  }
+  

@@ -1,0 +1,29 @@
+.appointment-list {
+  padding: 10px;
+  max-height: 100%;
+  overflow-y: auto; 
+}
+
+.appointment-item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+h4{
+  text-align: center;
+  color: green;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.date, .time {
+  font-style: italic;
+}
+
+.description {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555;
+}

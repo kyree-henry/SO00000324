@@ -1,0 +1,13 @@
+<div class="day-view">
+    <h4>Appointments for {{ currentDate | date: 'fullDate' }}</h4>
+    <ul>
+      <li *ngFor="let appointment of appointments">
+        <div class="appointment">
+          <h3>{{ appointment.title }}</h3>
+          <p>{{ appointment.time }}</p>
+          <p>{{ appointment.description }}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  

@@ -1,0 +1,12 @@
+<div class="year-select-container">
+    <label for="yearSelect">Select Year:</label>
+    <select (change)="onYearChange($event.target.value)">
+        <option *ngFor="let year of years" [selected]="year === calendarData.year" [ngClass]='year === currentYear ? "active" : ""' [value]="year">{{ year }}</option>
+    </select>
+</div>
+<div class="month-view">
+
+    <div *ngFor="let month of months; let i = index" class="month" (click)="selectMonth(month, i)">
+        {{ month }}
+    </div>
+</div>
