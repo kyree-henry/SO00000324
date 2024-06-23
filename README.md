@@ -47,12 +47,6 @@ We welcome contributions!
 
 UI design inspired by [Fantastical](https://flexibits.com/fantastical).
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
 Feel free to reach out if you have any questions or need further assistance!
 
 ---
