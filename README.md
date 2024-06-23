@@ -1,6 +1,6 @@
 # Calendar App
 
-This is a Calendar App written in Angular, featuring appointment functionalities inspired by the UI of [Fantastical](https://flexibits.com/fantastical).
+This is a Calendar App written in Angularr, leveraging only `@angular/material` and `@angular/cdk`. The app includes functionalities for scheduling and managing appointments. The UI design is inspired by the [Fantastical App](https://flexibits.com/fantastical).
 
 ## Features
 
