@@ -41,7 +41,7 @@ This is a Calendar App written in Angularr, leveraging only `@angular/material` 
 
 ## Contributing
 
-We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+We welcome contributions!
 
 ## Credits
 
