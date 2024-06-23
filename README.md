@@ -19,7 +19,7 @@ This is a Calendar App written in Angularr, leveraging only `@angular/material` 
 1. **Clone the repository:**
 
    ```sh
-   git clone https://github.com/your-username/calendar-app.git
+   git clone [https://github.com/your-username/calendar-app.git](https://github.com/kyree-henry/SO00000324.git)
    cd calendar-app
    ```
 
